@@ -33,6 +33,7 @@ jobs:
         run: |
           if [ -f .flake8 ] || [ -f setup.cfg ] || [ -f tox.ini ] || [ -f .pep8 ] || [ -f app.py ]; then
             flake8 .
+             echo "linted"
           else
             echo "No lint configuration found, skipping linting."
           fi
@@ -43,6 +44,7 @@ jobs:
         run: |
           if [-f test_app.py]; then
             pytest
+            echo "tested"
           else
             echo "No tests found, skipping tests."
           fi
