@@ -42,7 +42,7 @@ jobs:
       ####
       - name: Run Python tests
         run: |
-          if [-f test_app.py]; then
+          if [ -f test_app.py ]; then
             pytest
             echo "tested"
           else
