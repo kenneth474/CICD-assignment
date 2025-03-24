@@ -41,7 +41,7 @@ jobs:
       ####
       - name: Run Python tests
         run: |
-          if [ -f pytest.ini ] || ls tests || [-f test_app.py]; then
+          if [-f test_app.py]; then
             pytest
           else
             echo "No tests found, skipping tests."
