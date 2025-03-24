@@ -47,6 +47,8 @@ jobs:
             echo "No tests found, skipping tests."
           fi
 
+          if [-f tests/test_app.py]; then pytest tests/test_app.py; fi
+
   deploy:
     name: Deploy & Push to Docker Hub
     needs: [backend_flask]
